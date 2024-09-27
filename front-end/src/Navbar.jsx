@@ -1,17 +1,63 @@
-function Navbar() {
+
+import { Link } from 'react-router-dom';
+
+const NavBar = () => {
   return (
-    <nav className="bg-gray-800 text-white">
-      <ul className="flex justify-between px-4 py-2">
-        <li className="text-xl font-bold">SYNERGY</li>
-        <li className="flex space-x-4">
-          <a href="/" className="hover:text-blue-500">Home</a>
-          <a href="/sales" className="hover:text-blue-500">Sales</a>
-          <a href="/quicksale" className="hover:text-blue-500">Quicksale</a>
-          <a href="/about" className="hover:text-blue-500">About</a>
-        </li>
-      </ul>
+    <nav className="bg-gray-800 p-4">
+      <div className="container mx-auto">
+        <ul className="flex justify-around text-white">
+          <li>
+            <Link
+              to="/"
+              className="hover:text-yellow-400 transition duration-200"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/sales"
+              className="hover:text-yellow-400 transition duration-200"
+            >
+              Sales
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/quick-sale"
+              className="hover:text-yellow-400 transition duration-200"
+            >
+              Quick Sale
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/customer-management"
+              className="hover:text-yellow-400 transition duration-200"
+            >
+              Customer Management
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/inventory-management"
+              className="hover:text-yellow-400 transition duration-200"
+            >
+              Inventory Management
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className="hover:text-yellow-400 transition duration-200"
+            >
+              About
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
-}
+};
 
-export default Navbar;
+export default NavBar;
